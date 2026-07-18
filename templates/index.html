@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+{% for tool in tools %}
+<div class="card">
+    <h3>{{ tool.name }}</h3>
+    <p>{{ tool.desc }}</p>
+    <a href="{{ tool.url }}" class="btn">استخدم الأداة</a>
+</div>
+{% endfor %}
+{% endblock %}
