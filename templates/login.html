@@ -1,10 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
-{% for tool in tools %}
-<div class="card">
-    <h3>{{ tool.name }}</h3>
-    <p>{{ tool.desc }}</p>
-    <a href="{{ tool.url }}" class="btn">استخدم الأداة</a>
+<div class="card" style="grid-column: 1 / -1;">
+    <h2>لوحة تحكم المدير</h2>
+    <form method="POST" class="card" style="margin-bottom: 20px;">
+        <h3>إضافة أداة جديدة</h3>
+        <input type="text" name="name" placeholder="اسم الأداة" required>
+        <input type="text" name="desc" placeholder="وصف الأداة" required>
+        <input type="text" name="url" placeholder="رابط الأداة" required>
+        <button type="submit" class="btn">حفظ الأداة</button>
+    </form>
+    <h3>الأدوات الحالية</h3>
+    <ul>
+        {% for tool in tools %}
+        <li>{{ tool.name }}</li>
+        {% endfor %}
+    </ul>
 </div>
-{% endfor %}
 {% endblock %}
