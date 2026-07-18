@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card" style="grid-column: 1 / -1;">
+    <h2>لوحة تحكم المدير</h2>
+    <hr>
+    <h3>إدارة الأدوات</h3>
+    <table style="width:100%">
+        <tr>
+            <th>اسم الأداة</th>
+            <th>الإجراءات</th>
+        </tr>
+        <tr>
+            <td>تشكيل النصوص العربية</td>
+            <td><button>تعديل</button> <button style="background:red">حذف</button></td>
+        </tr>
+    </table>
+    <br>
+    <a href="/add-tool" class="btn">+ إضافة أداة جديدة</a>
+</div>
+{% endblock %}
